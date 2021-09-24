@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('./data/in', header=None)
-json = str(pd.read_csv('./data/mods.json', error_bad_lines=None))
+df = pd.read_csv('./in', header=None)
+json = str(pd.read_csv('./param.json', error_bad_lines=None))
 
 beg = 0
 end = 0
@@ -84,5 +84,3 @@ for i in range(len(w)):
     f.write("%d\r\n" % (i + 1))
 
 f.close()
-
-
