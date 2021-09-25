@@ -1,7 +1,7 @@
 # PHYS449 Machine Learning in Physics
 
-- name: *your name*
-- student ID: *your student ID*
+- name: Luc Ouellet
+- student ID: 20735166
 
 ## Instructions
 
