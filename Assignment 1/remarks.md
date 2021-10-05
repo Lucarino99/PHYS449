@@ -6,7 +6,7 @@
 - Command of does not take correct inputs (-1)
 - No implmentation of analytic solution (-3)
 - Test your code with data, .in files, provided (-2)
-- Missing constant term in gradient descent (-1)
+- Gradient descent should be done with averaged gradient for entire dataset (-1)
 
 
 ## Other Remarks
