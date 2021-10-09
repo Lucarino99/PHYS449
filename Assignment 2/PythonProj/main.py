@@ -73,20 +73,20 @@ for e in range(int(paramData["num_epochs"])):
         print("", "Training Loss: ", round((running_loss/10),10), " | Training Accuracy: ", round(((correct/len(y))*100),2), "%")
 
     #Testing Code
-    x_test = data.x_test
-    output = Net((x_test).float())
+x_test = data.x_test
+output = Net((x_test).float())
 
-    y_test = data.y_test
-    y_test = torch.div(y_test, 2)
-    y_test = (y_test.type(torch.LongTensor))
+y_test = data.y_test
+y_test = torch.div(y_test, 2)
+y_test = (y_test.type(torch.LongTensor))
 
-    correct = 0
+correct = 0
 
-    for j in range(len(y_test)):
-        if (torch.argmax(output[j]) == y_test[j]):
+for j in range(len(y_test)):
+    if (torch.argmax(output[j]) == y_test[j]):
             correct += 1
 
-    loss = criterion(output, y_test)
+loss = criterion(output, y_test)
 
-    if (e % 10) == 0:
-        print("Testing Loss: ", round(((loss.item() / 10)),10), " | Testing Accuracy: ", round(((correct / len(y_test)) * 100),2), "%\n")
+if (e % 10) == 0:
+    print("Testing Loss: ", round(((loss.item() / 10)),10), " | Testing Accuracy: ", round(((correct / len(y_test)) * 100),2), "%\n")
