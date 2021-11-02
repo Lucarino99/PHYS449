@@ -1,5 +1,8 @@
 # PHYS449
 
+Luc Ouellet
+20735166
+
 ## Dependencies
 
 - json
