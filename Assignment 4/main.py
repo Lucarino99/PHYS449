@@ -107,6 +107,17 @@ for n in range(num_epochs):
     loss.append([-sum((PositivePhase)) + sum((NegativePhase)),n])
 
 
+for i in range(len(couplingconst)):
+    if couplingconst[i] > 1:
+        couplingconst[i] = 1
+    if (couplingconst[i] > 0) and (couplingconst[i] < 1):
+        couplingconst[i] = -1
+    if (couplingconst[i] < 0) and (couplingconst[i] > -1):
+        couplingconst[i] = 1
+    if couplingconst[i] < -1:
+        couplingconst[i] = -1
+    
+    
 print("The final coupling constants are then: {(0,1): ",couplingconst[0],"(1,2): ",couplingconst[1],"(2,3): ",couplingconst[2],"(3,0): ",couplingconst[3],"}.")
 
 plt.plot(loss)
